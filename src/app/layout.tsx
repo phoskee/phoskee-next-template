@@ -4,6 +4,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/theme-provider";
 import { SiteHeader } from "@/components/site-header";
+import { Toaster } from "@/components/ui/sonner";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,26 +18,27 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <ThemeProvider
-        attribute="class"
-        defaultTheme="system"
-        enableSystem
-        disableTransitionOnChange
-        enableColorScheme
+      <body
+        className={cn(
+          "min-h-svh bg-background font-sans antialiased",
+          fontSans.variable,
+          fontMono.variable
+        )}
       >
-        <body
-          className={cn(
-            "min-h-svh bg-background font-sans antialiased",
-            fontSans.variable,
-            fontMono.variable
-          )}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+          enableColorScheme
         >
           <main className="relative flex min-h-svh flex-col bg-background">
             <SiteHeader />
             {children}
           </main>
-        </body>
-      </ThemeProvider>
+          <Toaster />
+        </ThemeProvider>
+      </body>
     </html>
   );
 }

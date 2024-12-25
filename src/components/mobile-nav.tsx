@@ -1,12 +1,12 @@
 "use client";
 
 import * as React from "react";
-import Link, { LinkProps } from "next/link";
 import { useRouter } from "next/navigation";
-
 import { cn } from "@/lib/utils";
-import { Drawer, DrawerContent, DrawerTrigger } from "./ui/drawer";
+import { mainNav } from "@/config/nav";
 import { Button } from "./ui/button";
+import { Drawer, DrawerContent, DrawerHeader, DrawerTitle, DrawerTrigger } from "./ui/drawer";
+import Link from "next/link";
 
 export function MobileNav() {
   const [open, setOpen] = React.useState(false);
@@ -40,14 +40,32 @@ export function MobileNav() {
         </Button>
       </DrawerTrigger>
       <DrawerContent className="max-h-[60svh] p-0">
+        <DrawerHeader>
+          <DrawerTitle>Menu di Navigazione</DrawerTitle>
+        </DrawerHeader>
         <div className="overflow-auto p-6">
           <div className="flex flex-col space-y-3">
-            <MobileLink href={"/"} onOpenChange={setOpen}>
-              Home
-            </MobileLink>
-          </div>
-          <div className="flex flex-col space-y-2">
-            <p>altro</p>
+            {mainNav.map((item) => (
+              <div key={item.href} className="space-y-3">
+                <MobileLink href={item.href} onOpenChange={setOpen}>
+                  {item.title}
+                </MobileLink>
+                {item.items && (
+                  <div className="ml-4 flex flex-col space-y-2">
+                    {item.items.map((subItem) => (
+                      <MobileLink
+                        key={subItem.href}
+                        href={subItem.href}
+                        onOpenChange={setOpen}
+                        className="text-muted-foreground"
+                      >
+                        {subItem.title}
+                      </MobileLink>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
           </div>
         </div>
       </DrawerContent>
@@ -55,7 +73,7 @@ export function MobileNav() {
   );
 }
 
-interface MobileLinkProps extends LinkProps {
+interface MobileLinkProps extends React.ComponentPropsWithoutRef<typeof Link> {
   onOpenChange?: (open: boolean) => void;
   children: React.ReactNode;
   className?: string;
