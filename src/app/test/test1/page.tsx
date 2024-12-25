@@ -18,7 +18,7 @@ export default function Page({ params }: Props) {
           <CardTitle>Page {id}</CardTitle>
         </CardHeader>
         <CardContent>
-          <p>Page content</p>
+          <p className="">Page content</p>
           <div className="size-[5svh] bg-red-500 "></div>
         </CardContent>
 		
