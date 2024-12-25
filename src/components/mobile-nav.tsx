@@ -40,18 +40,18 @@ export function MobileNav() {
         </Button>
       </DrawerTrigger>
       <DrawerContent className="max-h-[60svh] p-0">
-        <DrawerHeader>
+        <DrawerHeader className="hidden">
           <DrawerTitle>Menu di Navigazione</DrawerTitle>
         </DrawerHeader>
         <div className="overflow-auto p-6">
-          <div className="flex flex-col space-y-3">
+          <div className="flex flex-col space-y-2">
             {mainNav.map((item) => (
-              <div key={item.href} className="space-y-3">
+              <div key={item.href} className="space-y-2">
                 <MobileLink href={item.href} onOpenChange={setOpen}>
                   {item.title}
                 </MobileLink>
                 {item.items && (
-                  <div className="ml-4 flex flex-col space-y-2">
+                  <div className="ml-2 flex flex-col space-y-2">
                     {item.items.map((subItem) => (
                       <MobileLink
                         key={subItem.href}

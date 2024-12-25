@@ -19,10 +19,18 @@ export function MainNav() {
   return (
     <div className="mr-4 hidden md:flex">
       <Link href="/" className="mr-4 flex items-center gap-2 lg:mr-6">
-        LOGO
-        <span className="hidden font-bold lg:inline-block">
-          NAME
-        </span>
+        <svg
+          viewBox="0 0 24 24"
+          className="h-6 w-6"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+        </svg>
+        <span className="hidden font-bold lg:inline-block">PHOSKEE</span>
       </Link>
       <NavigationMenu>
         <NavigationMenuList>
@@ -43,7 +51,9 @@ export function MainNav() {
                                 pathname === subItem.href && "bg-accent"
                               )}
                             >
-                              <div className="text-sm font-medium leading-none">{subItem.title}</div>
+                              <div className="text-sm font-medium leading-none">
+                                {subItem.title}
+                              </div>
                               {subItem.description && (
                                 <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                                   {subItem.description}
@@ -61,7 +71,9 @@ export function MainNav() {
                   href={item.href}
                   className={cn(
                     "transition-colors hover:text-foreground/80",
-                    pathname === item.href ? "text-foreground" : "text-foreground/80"
+                    pathname === item.href
+                      ? "text-foreground"
+                      : "text-foreground/80"
                   )}
                 >
                   {item.title}
@@ -72,5 +84,5 @@ export function MainNav() {
         </NavigationMenuList>
       </NavigationMenu>
     </div>
-  )
+  );
 }

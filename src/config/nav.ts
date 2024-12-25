@@ -13,23 +13,23 @@ export interface NavSection {
 export const mainNav: NavItem[] = [
   
   {
-    title: "Documentazione",
-    href: "/documentazione",
+    title: "Test",
+    href: "/test",
     items: [
       {
-        title: "Guida Introduttiva",
-        href: "/docs/guida",
-        description: "Come iniziare con la nostra piattaforma",
+        title: "Test 1",
+        href: "/test/test1",
+        description: "Test 1",
       },
       {
-        title: "API Reference",
-        href: "/docs/api",
-        description: "Documentazione completa delle API",
+        title: "Test 2",
+        href: "/test/test2",
+        description: "Test 2",
       },
       {
-        title: "Tutorial",
-        href: "/docs/tutorial",
-        description: "Guide passo-passo per funzionalità specifiche",
+        title: "Test 3",
+        href: "/test/test3",
+        description: "Test 3",
       },
     ],
   },

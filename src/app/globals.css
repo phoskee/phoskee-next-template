@@ -109,9 +109,9 @@ body {
   p {
     @apply leading-7 [&:not(:first-child)]:mt-6;
   }
-  ul {
+  /* ul {
     @apply my-6 ml-6 list-disc [&>li]:mt-2;
-  }
+  } */
   blockquote {
     @apply mt-6 border-l-2 pl-6 italic;
   }
@@ -145,6 +145,7 @@ body {
   .yellow {
     @apply border border-yellow-500;
   }
+  
   .container-wrapper {
     @apply min-[1800px]:max-w-[1536px] min-[1800px]:border-x border-border/30 dark:border-border mx-auto w-full;
   }

@@ -32,7 +32,7 @@ export default function RootLayout({
           disableTransitionOnChange
           enableColorScheme
         >
-          <main className="relative flex min-h-svh flex-col bg-background">
+          <main className="relative flex min-h-svh flex-col bg-background gap-2">
             <SiteHeader />
             {children}
           </main>
