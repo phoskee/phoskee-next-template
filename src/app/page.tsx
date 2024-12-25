@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div>
+    <div className="container-wrapper">
       <header>
         <h1>Pagina di Test HTML</h1>
         <nav>
