@@ -34,15 +34,15 @@ export function MainNav() {
       </Link>
       <NavigationMenu>
         <NavigationMenuList>
-          {mainNav.map((item) => (
-            <NavigationMenuItem key={item.href}>
+          {mainNav.map((item, index) => (
+            <NavigationMenuItem key={index}>
               {item.items ? (
                 <>
                   <NavigationMenuTrigger>{item.title}</NavigationMenuTrigger>
-                  <NavigationMenuContent>
+                  <NavigationMenuContent className="shadow-3xl bg-background/30 ">
                     <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-                      {item.items.map((subItem) => (
-                        <li key={subItem.href}>
+                      {item.items.map((subItem, index) => (
+                        <li key={index}>
                           <NavigationMenuLink asChild>
                             <Link
                               href={subItem.href}

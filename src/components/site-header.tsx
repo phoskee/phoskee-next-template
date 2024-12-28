@@ -17,12 +17,12 @@ export function SiteHeader() {
           <MobileNav />
           <div className="flex flex-1 items-center justify-between gap-2 md:justify-end">
             <div className="w-full flex-1 md:w-auto md:flex-none">
-              <p>altro</p>
+              {/* <p>altro</p> */}
             </div>
             <nav className="flex items-center gap-2">
               <Button variant="ghost" size="icon" className="h-8 w-8 px-0">
                 <Link
-                  href={"/"}
+                  href={"https://github.com/"}
                   target="_blank"
                   rel="noreferrer"
                 >

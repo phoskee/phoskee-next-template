@@ -11,88 +11,66 @@ export interface NavSection {
 }
 
 export const mainNav: NavItem[] = [
-  
   {
-    title: "Test",
-    href: "/test",
+    title: "Sviluppo",
+    href: "#",
     items: [
       {
-        title: "Test 1",
-        href: "/test/test1",
-        description: "Test 1",
+        title: "Frontend",
+        href: "#",
+        description: "Sviluppo interfacce utente moderne",
       },
       {
-        title: "Test 2",
-        href: "/test/test2",
-        description: "Test 2",
+        title: "Backend",
+        href: "#",
+        description: "Architetture e API scalabili",
       },
       {
-        title: "Test 3",
-        href: "/test/test3",
-        description: "Test 3",
+        title: "DevOps",
+        href: "#",
+        description: "Automazione e deployment",
       },
     ],
   },
   {
-    title: "Risorse",
-    href: "/risorse",
+    title: "Formazione",
+    href: "#",
     items: [
       {
-        title: "Template",
-        href: "/risorse/template",
-        description: "Template pronti all'uso",
+        title: "Corsi Online",
+        href: "#",
+        description: "Percorsi formativi personalizzati",
       },
       {
-        title: "Esempi",
-        href: "/risorse/esempi",
-        description: "Esempi di implementazione",
+        title: "Workshop",
+        href: "#",
+        description: "Sessioni pratiche intensive",
       },
       {
-        title: "Best Practices",
-        href: "/risorse/best-practices",
-        description: "Linee guida e migliori pratiche",
+        title: "Certificazioni",
+        href: "#",
+        description: "Programmi di certificazione professionale",
       },
     ],
   },
   {
-    title: "Strumenti",
-    href: "/strumenti",
+    title: "Supporto",
+    href: "#",
     items: [
       {
-        title: "CLI",
-        href: "/strumenti/cli",
-        description: "Strumenti da riga di comando",
+        title: "Consulenza",
+        href: "#",
+        description: "Supporto tecnico specializzato",
       },
       {
-        title: "Playground",
-        href: "/strumenti/playground",
-        description: "Ambiente di test interattivo",
+        title: "Documentazione",
+        href: "#",
+        description: "Guide e riferimenti tecnici",
       },
       {
-        title: "Debug",
-        href: "/strumenti/debug",
-        description: "Strumenti per il debugging",
-      },
-    ],
-  },
-  {
-    title: "Community",
-    href: "/community",
-    items: [
-      {
-        title: "Forum",
-        href: "/community/forum",
-        description: "Discussioni e supporto della community",
-      },
-      {
-        title: "Blog",
-        href: "/community/blog",
-        description: "Articoli e aggiornamenti",
-      },
-      {
-        title: "Eventi",
-        href: "/community/eventi",
-        description: "Meetup e conferenze",
+        title: "FAQ",
+        href: "#",
+        description: "Domande frequenti e soluzioni",
       },
     ],
   },

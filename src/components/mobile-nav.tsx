@@ -45,16 +45,16 @@ export function MobileNav() {
         </DrawerHeader>
         <div className="overflow-auto p-6">
           <div className="flex flex-col space-y-2">
-            {mainNav.map((item) => (
-              <div key={item.href} className="space-y-2">
+            {mainNav.map((item, index) => (
+              <div key={index} className="space-y-2">
                 <MobileLink href={item.href} onOpenChange={setOpen}>
                   {item.title}
                 </MobileLink>
                 {item.items && (
                   <div className="ml-2 flex flex-col space-y-2">
-                    {item.items.map((subItem) => (
+                    {item.items.map((subItem, index) => (
                       <MobileLink
-                        key={subItem.href}
+                        key={index}
                         href={subItem.href}
                         onOpenChange={setOpen}
                         className="text-muted-foreground"
